@@ -2,7 +2,7 @@ from collections import deque
 
 def bfs(n, t, p, l, r):
     queue=deque()
-    direction=[l, r]
+    direction=[-l, r]
     walked=set()
     queue.append((0, 0))
     walked.add(0)
@@ -13,7 +13,14 @@ def bfs(n, t, p, l, r):
             return step
         for d in direction:
             nx=x+d
-            if 
+            if 0<=nx<n and nx not in walked:
+                nx=t[nx]
+                walked.add(nx)
+                queue.append((nx, step+1))
+
+    
+
+    return -1
 
 
 n, p, l, r=map(int, input().split())
