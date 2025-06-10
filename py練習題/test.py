@@ -1,4 +1,4 @@
-n=3
-a=[x+5 for x in range(10)]
-n=a[n]
-print(n)
+import math
+
+print(math.pi)
+print(math.e)
