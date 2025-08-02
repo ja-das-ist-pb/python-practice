@@ -1,4 +1,3 @@
-n=3
-a=[x+5 for x in range(10)]
-n=a[n]
-print(n)
+a=list()
+a.append(3)
+print(a.pop(), len(a))
