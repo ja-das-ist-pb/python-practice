@@ -36,16 +36,31 @@ for i in range(len(data)):
     ptr=make_tree(ptr, data[i])
 
 root=ptr
-ptr=root.left
-print('left node')
-while ptr!=None:
-    print(ptr.val)
-    ptr=ptr.left
-print()
-print('right node')
-ptr=root.right
-while ptr!=None:
-    print(ptr.val)
-    ptr=ptr.right
 
+def preorder(ptr):
+    if ptr!=None:
+        print(ptr.val, end="")
+        preorder(ptr.left)
+        preorder(ptr.right)
+
+def inorder(ptr):
+    if ptr!=None:
+        inorder(ptr.left)
+        print(ptr.val, end="")
+        inorder(ptr.right)
+
+def postorder(ptr):
+    if ptr!=None:
+        postorder(ptr.left)
+        postorder(ptr.right)
+        print(ptr.val, end="")
+
+print('DLR')
+preorder(ptr)
+print('------------------------')
+print('LDR')
+inorder(ptr)
+print('------------------------')
+print('LRD')
+postorder(ptr)
 # 5 6 24 8 12 3 17 1 9
