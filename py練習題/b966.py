@@ -9,7 +9,6 @@ for i in range(len(a)):
         s.add(j)
 new=list(s)
 new.sort()
-tot=0
 backup=0
 for i in range(1, len(new)):
     if new[i]==new[i-1]+1:

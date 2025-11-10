@@ -15,4 +15,3 @@ for _ in range(n):
                 a[ptr]=False
                 ptr=ptr*2+1
     print(ptr)
-                

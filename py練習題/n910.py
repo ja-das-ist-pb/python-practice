@@ -21,9 +21,10 @@ col=[[] for _ in range(n)]
 for i in range(n):
     backup=0
     for j in range(n):
+        able=False
         if a[i][j]==1 and (j==0 or (j>0 and a[i][j-1]==0)):
             backup+=1
-        else:
+        elif a[i][j]==0:
             row[i].append(backup)
             backup=0
 
